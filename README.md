@@ -3,7 +3,8 @@
 This repository holds some of my Python projects that were done through my schooling with the Tech Academy. They use modules such as tkinter or sqlite3. Many of these projects are practicing Python fundamentals.
 
 # Projects:
-<a href="https://github.com/Gman615/Python_Projects/tree/main/Check%20Files">File Manager</a><br><a href="https://github.com/Gman615/Python-Projects/blob/main/phonebook_func.py">Phonebook</a><br><a href="https://github.com/Gman615/Python_Projects/tree/main/HTML%20Create">HTML Create</a><br>
+<a href="https://github.com/Gman615/Python_Projects/tree/main/File%20Manager">File Manager</a><br><a href="https://github.com/Gman615/Python-Projects/blob/main/phonebook_func.py">Phonebook</a><br><a href="https://github.com/Gman615/Python_Projects/tree/main/HTML%20Create">HTML Create</a><br><a href="https://github.com/Gman615/Python_Projects/tree/main/Student%20Tracking">Student Tracking</a><br><a href="https://github.com/Gman615/Python_Projects/tree/main/DjangoUniversity">Django University</a><br>
+<a href="https://github.com/Gman615/Python_Projects/tree/main/Bank_db">Bank_db</a><br>
 
 # File Manager:
 This project allows files to be transferred from one folder to another automatically. The user can choose the source file and the destination folder for the files that are to be transferred. The app also sorts files that have been modified in the last 24 hours.
@@ -15,5 +16,14 @@ This project gives the user a phone book in which he/she can enter details such 
 
 With this project, I created a function that makes basic HTML pages. The program allows users to input a phrase, and that is displayed with a basic HTML document.
 
+# Student Tracking
 
+I was able to get some experience with this project using Python with SQL. This project does not involve Django or any platforms. It does set up an SQL database and allows entry of student information.
 
+# Django University
+
+This was a Django practice project in which I created a basic model for a university, which allowed student info to be entered and committed to the database.
+
+# Bank_db
+
+This is another example of a Django project, this one works as a checkbook app for people that allows users to balance their checkbook with a stored balance. In many ways, this app operates similar to a bank website.
