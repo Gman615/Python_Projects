@@ -192,11 +192,20 @@ app = Flask(__name__)
 def index():
     return "Hello world!"
 
-@app.route("/library/v1.0/nba_teams", methods=["GET"])
+@app.route("/library/v1.0/nba_teams/<int:nba_id>", methods=["GET"])
+# this function requires a paramenter from the URL
+def get_nba_teams(nba_id):
+    # create an empty dictionary
+    result = {}
 
-def get_nba_teams():
-
-    return jsonify({"nba_teams": nba_teams})
+    # Loops through all the different teams to find the one with the id that was entered.
+    for nba_team in nba_teams:
+        # checks if the id is the same as the parameter
+        if nba_team["id"] == nba_id:
+            # sets the result to the book and makes it a JSON.
+            result = jsonify({"nba_team": nba_team})
+    
+    return result
 
 if __name__ == "__main__":
 
