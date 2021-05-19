@@ -192,9 +192,16 @@ app = Flask(__name__)
 def index():
     return "Hello world!"
 
+# Annotation that allows the function to be hit at the specific URL. Indicates a GET HTTP method.
+@app.route("/library/v1.0/nba_teams", methods=["GET"])
+# function that will run when the endpoint is hit
+def get_nba_teams():
+    # returns the JSON of the teams defined above. jsonify is a Flask function that serializes the object for us
+    return jsonify({"nba_teams": nba_teams})
+
 @app.route("/library/v1.0/nba_teams/<int:nba_id>", methods=["GET"])
 # this function requires a paramenter from the URL
-def get_nba_teams(nba_id):
+def get_nba_team(nba_id):
     # create an empty dictionary
     result = {}
 
