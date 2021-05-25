@@ -4,7 +4,7 @@ import requests
 def imdb_search(title):    
     # url for the imdb api
     url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
-    # query string that includes what is being searched for, title is the parameter
+    # query string that includes what is being searched for, title is in the parameters
     querystring = {"s": title,"page":"1","r":"json"}
 
     headers = {
@@ -13,8 +13,14 @@ def imdb_search(title):
         }
     # stores the "GET" response in the response variable
     response = requests.request("GET", url, headers=headers, params=querystring)
-    # prints out the response in text to the console
-    print(response.text)
+    # converts resulting text to a string
+    string = str(response.text)
+    # replaces commas with a new line/enter
+    noComma = string.replace(",","\n ")
+    # replaces " with nothing
+    noQC = noComma.replace("\"","")    
+    # returns the results
+    print(noQC)
 
 userinput = input("Search for a movie, television show, video game or any type of media \n")
 # above line requests user input
