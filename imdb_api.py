@@ -22,19 +22,18 @@ def imdb_search(title):
     noQC = noComma.replace("\"","")
     # opens a new html document, stores it in the variable f
     f = open("simHTML1.html", "w")
-    # takes the variable f and the open write method to write this information on the webpage
-
+    # takes the variable f and the open write method to write the results from the api search on the webpage, includes some basic CSS styling
     f.write("""<html>
-    <body><h1>{}<h1></body></html>""".format(noQC)) # formats input string and puts in document
-    f.close()           
+    <body style="background-image: url('https://www.insertcart.com/wp-content/uploads/2016/12/logo-IMDB.jpg')";><h1 style="color:purple; ">{}<h1></body></html>""".format(noQC)) 
+    f.close()
+    # opens a new tab with the generated webpage
     webbrowser.open_new_tab("simHTML1.html")
-    # returns the results
-    #print(noQC)
 
-userinput = input("Search for a movie, television show, video game or any type of media \n")
 # above line requests user input
-imdb_search(userinput)
+userinput = input("Search for a movie, television show, video game or any type of media \n")
 # calls function, passes argument of user input
+imdb_search(userinput)
+# program flow, runs app based on name of file, allows other documents to be linked to this one
 if __name__ == "__api__":
 
     app.run()
