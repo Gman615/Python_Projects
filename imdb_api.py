@@ -1,4 +1,5 @@
 import requests
+import webbrowser
 
 
 def imdb_search(title):    
@@ -18,9 +19,17 @@ def imdb_search(title):
     # replaces commas with a new line/enter
     noComma = string.replace(",","\n ")
     # replaces " with nothing
-    noQC = noComma.replace("\"","")    
+    noQC = noComma.replace("\"","")
+    # opens a new html document, stores it in the variable f
+    f = open("simHTML1.html", "w")
+    # takes the variable f and the open write method to write this information on the webpage
+
+    f.write("""<html>
+    <body><h1>{}<h1></body></html>""".format(noQC)) # formats input string and puts in document
+    f.close()           
+    webbrowser.open_new_tab("simHTML1.html")
     # returns the results
-    print(noQC)
+    #print(noQC)
 
 userinput = input("Search for a movie, television show, video game or any type of media \n")
 # above line requests user input

@@ -19,14 +19,19 @@ def ask_quit(self):
 # function for creating a new document if it does not exist,
 # as well as altering the one that does exist
 def file_create(self):
-    uinput = self.entry.get("1.0",END) # takes user input and 
+    # takes user input and formats it with the f.write method down below
+    uinput = self.entry.get("1.0",END)
+    # opens a new html document, stores it in the variable f
     f = open("simHTML1.html", "w")
+    # takes the variable f and the open write method to write this information on the webpage
     f.write("""<html>
     <body><h1>Stay tuned for our amazing summer sale!</h1>
     </body></html>""")
     f.close()
 
+    # opens a new html document, stores it in the variable f
     f = open("simHTML1.html", "w")
+    # takes the variable f and the open write method to write this information on the webpage
     f.write("""<html>
     <body><h1>{}<h1></body></html>""".format(uinput)) # formats input string and puts in document
     f.close()           
