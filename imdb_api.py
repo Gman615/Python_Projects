@@ -24,7 +24,7 @@ def imdb_search(title):
     f = open("simHTML1.html", "w")
     # takes the variable f and the open write method to write the results from the api search on the webpage, includes some basic CSS styling
     f.write("""<html>
-    <body style="background-image: url('https://www.insertcart.com/wp-content/uploads/2016/12/logo-IMDB.jpg')";><h1 style="color:purple; ">{}<h1></body></html>""".format(noQC)) 
+    <body style="background: black";><h1 style="color:green; ">{}<h1></body></html>""".format(noQC)) 
     f.close()
     # opens a new tab with the generated webpage
     webbrowser.open_new_tab("simHTML1.html")
